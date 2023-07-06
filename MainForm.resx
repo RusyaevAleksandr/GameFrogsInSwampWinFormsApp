@@ -228,7 +228,7 @@
         gg==
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="frogLeftPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAAGFRJREFUeF7t
         nXeUVdW9x+mdAWaYYSgzwzBD71VAioAUO2IsoCj2/mJ5CthINFaKFYVRpIkUAQUxRkWxJhpNNDEKRk18
@@ -338,7 +338,7 @@
         gg==
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="frogLeftPictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAAGFRJREFUeF7t
         nXeUVdW9x+mdAWaYYSgzwzBD71VAioAUO2IsoCj2/mJ5CthINFaKFYVRpIkUAQUxRkWxJhpNNDEKRk18
@@ -448,7 +448,7 @@
         gg==
 </value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="frogLeftPictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAAGFRJREFUeF7t
         nXeUVdW9x+mdAWaYYSgzwzBD71VAioAUO2IsoCj2/mJ5CthINFaKFYVRpIkUAQUxRkWxJhpNNDEKRk18
@@ -558,7 +558,7 @@
         gg==
 </value>
   </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="emptyPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAABhpJREFUeF7t
         mq2OLUUURnkY3oAHQCAIjpAgLg4SzE0QVxESQOAQCAxiQrhBExyGYAgKf8V9A17jkDXJB3tqqk5Xdf30
@@ -590,7 +590,7 @@
         rFTOAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="frogRightPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAAOa5JREFUeF7t
         vQdYlGfWPj52AaX3KgIK0mw0RQV7r0gvomADwYqICoiCItJF6fYuIM2KvbdETTRqjC29J5vs7pfd/fb+
@@ -842,7 +842,7 @@
         XJiRQuDJ0QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="frogRightPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAAOa5JREFUeF7t
         vQdYlGfWPj52AaX3KgIK0mw0RQV7r0gvomADwYqICoiCItJF6fYuIM2KvbdETTRqjC29J5vs7pfd/fb+
@@ -1094,7 +1094,7 @@
         XJiRQuDJ0QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="frogRightPictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAAOa5JREFUeF7t
         vQdYlGfWPj52AaX3KgIK0mw0RQV7r0gvomADwYqICoiCItJF6fYuIM2KvbdETTRqjC29J5vs7pfd/fb+
@@ -1346,7 +1346,7 @@
         XJiRQuDJ0QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="frogRightPictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABuCAYAAADLRVa8AAAABGdBTUEAALGPC/xhBQAAOa5JREFUeF7t
         vQdYlGfWPj52AaX3KgIK0mw0RQV7r0gvomADwYqICoiCItJF6fYuIM2KvbdETTRqjC29J5vs7pfd/fb+

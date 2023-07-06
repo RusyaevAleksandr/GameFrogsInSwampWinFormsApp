@@ -178,13 +178,13 @@
             // начатьСначалаToolStripMenuItem
             // 
             начатьСначалаToolStripMenuItem.Name = "начатьСначалаToolStripMenuItem";
-            начатьСначалаToolStripMenuItem.Size = new Size(180, 22);
+            начатьСначалаToolStripMenuItem.Size = new Size(170, 22);
             начатьСначалаToolStripMenuItem.Text = "Начать сначала";
             // 
             // выходToolStripMenuItem
             // 
             выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            выходToolStripMenuItem.Size = new Size(180, 22);
+            выходToolStripMenuItem.Size = new Size(170, 22);
             выходToolStripMenuItem.Text = "Выход";
             // 
             // информацияToolStripMenuItem
@@ -198,13 +198,13 @@
             // правилаИгрыToolStripMenuItem
             // 
             правилаИгрыToolStripMenuItem.Name = "правилаИгрыToolStripMenuItem";
-            правилаИгрыToolStripMenuItem.Size = new Size(180, 22);
+            правилаИгрыToolStripMenuItem.Size = new Size(161, 22);
             правилаИгрыToolStripMenuItem.Text = "Правила игры";
             // 
             // оToolStripMenuItem
             // 
             оToolStripMenuItem.Name = "оToolStripMenuItem";
-            оToolStripMenuItem.Size = new Size(180, 22);
+            оToolStripMenuItem.Size = new Size(161, 22);
             оToolStripMenuItem.Text = "О программе";
             // 
             // NumberMovesLabelText
@@ -245,6 +245,7 @@
             Controls.Add(frogLeftPictureBox1);
             Controls.Add(menuStrip);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip;
             MaximizeBox = false;
             Name = "MainForm";

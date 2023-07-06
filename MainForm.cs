@@ -32,12 +32,12 @@ namespace FrogsInSwampWinFormsApp
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
 
         private void rulesGameToolStripMenuItem_Click(object sender, EventArgs e)

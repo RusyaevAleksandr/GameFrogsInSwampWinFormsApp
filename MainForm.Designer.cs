@@ -186,14 +186,14 @@
             // startToolStripMenuItem
             // 
             startToolStripMenuItem.Name = "startToolStripMenuItem";
-            startToolStripMenuItem.Size = new Size(180, 22);
+            startToolStripMenuItem.Size = new Size(170, 22);
             startToolStripMenuItem.Text = "Начать сначала";
             startToolStripMenuItem.Click += startToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(170, 22);
             exitToolStripMenuItem.Text = "Выход";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -208,14 +208,14 @@
             // rulesGameToolStripMenuItem
             // 
             rulesGameToolStripMenuItem.Name = "rulesGameToolStripMenuItem";
-            rulesGameToolStripMenuItem.Size = new Size(180, 22);
+            rulesGameToolStripMenuItem.Size = new Size(161, 22);
             rulesGameToolStripMenuItem.Text = "Правила игры";
             rulesGameToolStripMenuItem.Click += rulesGameToolStripMenuItem_Click;
             // 
             // forProgramToolStripMenuItem
             // 
             forProgramToolStripMenuItem.Name = "forProgramToolStripMenuItem";
-            forProgramToolStripMenuItem.Size = new Size(180, 22);
+            forProgramToolStripMenuItem.Size = new Size(161, 22);
             forProgramToolStripMenuItem.Text = "О программе";
             forProgramToolStripMenuItem.Click += forProgramToolStripMenuItem_Click;
             // 
@@ -258,6 +258,7 @@
             Controls.Add(menuStrip);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip;
             MaximizeBox = false;
             Name = "MainForm";

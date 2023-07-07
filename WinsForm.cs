@@ -20,16 +20,18 @@
             winsInfoLabel.Text = SetTextVictoryMessage(mainForm.NumberMovesFrogs, mainForm.MinNumberMovesToWins);
         }
 
-        private string SetTextVictoryMessage(int numberMovesFrogs, int minNumberMovesToWins)
+        private string SetTextVictoryMessage(int numberMoves, int minNumberMoves)
         {
-            if (numberMovesFrogs > minNumberMovesToWins)
-            {
+            if (numberMoves > minNumberMoves)
+            {                
                 return "Поздравляем с победой! Но можно лучше! Попробуйте еще раз.";
             }
-            else
+            else if (numberMoves == minNumberMoves)
             {
                 return "Поздравляем с победой! Вы переместили лягушек за минимальное количество ходов!";
             }
+
+            return "Поздравляем с победой!";
         }
     }
 }

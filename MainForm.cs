@@ -1,3 +1,5 @@
+using System.Diagnostics.Metrics;
+
 namespace FrogsInSwampWinFormsApp
 {
     public partial class MainForm : Form
@@ -26,6 +28,26 @@ namespace FrogsInSwampWinFormsApp
         private void frogPictureBox_Click(object sender, EventArgs e)
         {
             Swap((PictureBox)sender);
+
+            if (EndGame())
+            {
+                if (CanBeFewerSteps())
+                {
+
+                }
+                WinsForm winsForm = new WinsForm();
+                winsForm.Show();
+            }
+        }
+
+        private bool CanBeFewerSteps()
+        {
+            if(numberMovesFrogs > minNumberMovesToWins)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private void Swap(PictureBox clickedPicture)
@@ -46,13 +68,7 @@ namespace FrogsInSwampWinFormsApp
 
                 numberMovesFrogs++;
 
-                numberMovesLabel.Text = numberMovesFrogs.ToString();
-
-                if (EndGame())
-                {
-                    WinsForm winsForm = new WinsForm();
-                    winsForm.Show();
-                }
+                numberMovesLabel.Text = numberMovesFrogs.ToString();                
             }
         }
 

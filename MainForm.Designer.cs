@@ -45,8 +45,11 @@
             infoToolStripMenuItem = new ToolStripMenuItem();
             rulesGameToolStripMenuItem = new ToolStripMenuItem();
             forProgramToolStripMenuItem = new ToolStripMenuItem();
-            NumberMovesLabelText = new Label();
-            NumberMovesLabel = new Label();
+            numberMovesLabelText = new Label();
+            numberMovesLabel = new Label();
+            minNumberMovesToWinsTextLabel = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            minNumberMovesToWinsLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)frogLeftPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)frogLeftPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)frogLeftPictureBox3).BeginInit();
@@ -57,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)frogRightPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)frogRightPictureBox4).BeginInit();
             menuStrip.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // frogLeftPictureBox1
@@ -171,81 +175,134 @@
             menuStrip.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, infoToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
-            menuStrip.Size = new Size(936, 25);
+            menuStrip.Size = new Size(936, 29);
             menuStrip.TabIndex = 9;
             menuStrip.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
             // 
             menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { startToolStripMenuItem, exitToolStripMenuItem });
-            menuToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            menuToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            menuToolStripMenuItem.ForeColor = Color.DarkSlateGray;
             menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            menuToolStripMenuItem.Size = new Size(57, 21);
+            menuToolStripMenuItem.Size = new Size(70, 25);
             menuToolStripMenuItem.Text = "Меню";
             // 
             // startToolStripMenuItem
             // 
+            startToolStripMenuItem.ForeColor = Color.DarkSlateGray;
             startToolStripMenuItem.Name = "startToolStripMenuItem";
-            startToolStripMenuItem.Size = new Size(170, 22);
+            startToolStripMenuItem.Size = new Size(205, 26);
             startToolStripMenuItem.Text = "Начать сначала";
             startToolStripMenuItem.Click += startToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
+            exitToolStripMenuItem.ForeColor = Color.DarkSlateGray;
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(170, 22);
+            exitToolStripMenuItem.Size = new Size(205, 26);
             exitToolStripMenuItem.Text = "Выход";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // infoToolStripMenuItem
             // 
             infoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rulesGameToolStripMenuItem, forProgramToolStripMenuItem });
-            infoToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            infoToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            infoToolStripMenuItem.ForeColor = Color.DarkSlateGray;
             infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            infoToolStripMenuItem.Size = new Size(99, 21);
+            infoToolStripMenuItem.Size = new Size(128, 25);
             infoToolStripMenuItem.Text = "Информация";
             // 
             // rulesGameToolStripMenuItem
             // 
+            rulesGameToolStripMenuItem.ForeColor = Color.DarkSlateGray;
             rulesGameToolStripMenuItem.Name = "rulesGameToolStripMenuItem";
-            rulesGameToolStripMenuItem.Size = new Size(161, 22);
+            rulesGameToolStripMenuItem.Size = new Size(193, 26);
             rulesGameToolStripMenuItem.Text = "Правила игры";
             rulesGameToolStripMenuItem.Click += rulesGameToolStripMenuItem_Click;
             // 
             // forProgramToolStripMenuItem
             // 
+            forProgramToolStripMenuItem.ForeColor = Color.DarkSlateGray;
             forProgramToolStripMenuItem.Name = "forProgramToolStripMenuItem";
-            forProgramToolStripMenuItem.Size = new Size(161, 22);
+            forProgramToolStripMenuItem.Size = new Size(193, 26);
             forProgramToolStripMenuItem.Text = "О программе";
             forProgramToolStripMenuItem.Click += forProgramToolStripMenuItem_Click;
             // 
-            // NumberMovesLabelText
+            // numberMovesLabelText
             // 
-            NumberMovesLabelText.AutoSize = true;
-            NumberMovesLabelText.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            NumberMovesLabelText.Location = new Point(12, 177);
-            NumberMovesLabelText.Name = "NumberMovesLabelText";
-            NumberMovesLabelText.Size = new Size(189, 25);
-            NumberMovesLabelText.TabIndex = 10;
-            NumberMovesLabelText.Text = "Количество ходов:";
+            numberMovesLabelText.AutoSize = true;
+            numberMovesLabelText.Dock = DockStyle.Right;
+            numberMovesLabelText.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            numberMovesLabelText.ForeColor = Color.DarkSlateGray;
+            numberMovesLabelText.Location = new Point(20, 0);
+            numberMovesLabelText.Name = "numberMovesLabelText";
+            numberMovesLabelText.Size = new Size(211, 40);
+            numberMovesLabelText.TabIndex = 10;
+            numberMovesLabelText.Text = "Количество ходов:";
             // 
-            // NumberMovesLabel
+            // numberMovesLabel
             // 
-            NumberMovesLabel.AutoSize = true;
-            NumberMovesLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            NumberMovesLabel.Location = new Point(207, 177);
-            NumberMovesLabel.Name = "NumberMovesLabel";
-            NumberMovesLabel.Size = new Size(34, 25);
-            NumberMovesLabel.TabIndex = 11;
-            NumberMovesLabel.Text = "00";
+            numberMovesLabel.AutoSize = true;
+            numberMovesLabel.Dock = DockStyle.Left;
+            numberMovesLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            numberMovesLabel.ForeColor = Color.Chocolate;
+            numberMovesLabel.Location = new Point(237, 0);
+            numberMovesLabel.Name = "numberMovesLabel";
+            numberMovesLabel.Size = new Size(25, 40);
+            numberMovesLabel.TabIndex = 11;
+            numberMovesLabel.Text = "0";
+            // 
+            // minNumberMovesToWinsTextLabel
+            // 
+            minNumberMovesToWinsTextLabel.AutoSize = true;
+            minNumberMovesToWinsTextLabel.Dock = DockStyle.Right;
+            minNumberMovesToWinsTextLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            minNumberMovesToWinsTextLabel.ForeColor = Color.DarkSlateGray;
+            minNumberMovesToWinsTextLabel.Location = new Point(351, 0);
+            minNumberMovesToWinsTextLabel.Name = "minNumberMovesToWinsTextLabel";
+            minNumberMovesToWinsTextLabel.Size = new Size(487, 40);
+            minNumberMovesToWinsTextLabel.TabIndex = 12;
+            minNumberMovesToWinsTextLabel.Text = "Минимальное количество ходов для победы:";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 4;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.Controls.Add(numberMovesLabelText, 0, 0);
+            tableLayoutPanel1.Controls.Add(minNumberMovesToWinsTextLabel, 2, 0);
+            tableLayoutPanel1.Controls.Add(numberMovesLabel, 1, 0);
+            tableLayoutPanel1.Controls.Add(minNumberMovesToWinsLabel, 3, 0);
+            tableLayoutPanel1.Dock = DockStyle.Bottom;
+            tableLayoutPanel1.Location = new Point(0, 171);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(936, 40);
+            tableLayoutPanel1.TabIndex = 13;
+            // 
+            // minNumberMovesToWinsLabel
+            // 
+            minNumberMovesToWinsLabel.AutoSize = true;
+            minNumberMovesToWinsLabel.Dock = DockStyle.Left;
+            minNumberMovesToWinsLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            minNumberMovesToWinsLabel.ForeColor = Color.Chocolate;
+            minNumberMovesToWinsLabel.Location = new Point(844, 0);
+            minNumberMovesToWinsLabel.Name = "minNumberMovesToWinsLabel";
+            minNumberMovesToWinsLabel.Size = new Size(25, 40);
+            minNumberMovesToWinsLabel.TabIndex = 13;
+            minNumberMovesToWinsLabel.Text = "0";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSkyBlue;
             ClientSize = new Size(936, 211);
-            Controls.Add(NumberMovesLabel);
-            Controls.Add(NumberMovesLabelText);
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(frogRightPictureBox4);
             Controls.Add(frogRightPictureBox3);
             Controls.Add(frogRightPictureBox2);
@@ -263,6 +320,7 @@
             MaximizeBox = false;
             Name = "MainForm";
             Text = "Лягушки на болоте";
+            Shown += MainForm_Shown;
             ((System.ComponentModel.ISupportInitialize)frogLeftPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)frogLeftPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)frogLeftPictureBox3).EndInit();
@@ -274,6 +332,8 @@
             ((System.ComponentModel.ISupportInitialize)frogRightPictureBox4).EndInit();
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -296,7 +356,10 @@
         private ToolStripMenuItem infoToolStripMenuItem;
         private ToolStripMenuItem rulesGameToolStripMenuItem;
         private ToolStripMenuItem forProgramToolStripMenuItem;
-        private Label NumberMovesLabelText;
-        private Label NumberMovesLabel;
+        private Label numberMovesLabelText;
+        private Label numberMovesLabel;
+        private Label minNumberMovesToWinsTextLabel;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label minNumberMovesToWinsLabel;
     }
 }

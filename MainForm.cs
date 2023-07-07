@@ -2,6 +2,22 @@ namespace FrogsInSwampWinFormsApp
 {
     public partial class MainForm : Form
     {
+        private int numberMovesFrogs = 0;
+
+        private int minNumberMovesToWins = 24;
+
+        public int NumberMovesFrogs
+        {
+            get { return numberMovesFrogs; }
+            set { numberMovesFrogs = value; }
+        }
+
+        public int MinNumberMovesToWins
+        {
+            get { return minNumberMovesToWins; }
+            set { minNumberMovesToWins = value; }
+        }
+
         public MainForm()
         {
             InitializeComponent();
@@ -27,7 +43,34 @@ namespace FrogsInSwampWinFormsApp
                 clickedPicture.Location = emptyPictureBox.Location;
 
                 emptyPictureBox.Location = location;
+
+                numberMovesFrogs++;
+
+                numberMovesLabel.Text = numberMovesFrogs.ToString();
+
+                if (EndGame())
+                {
+                    WinsForm winsForm = new WinsForm();
+                    winsForm.Show();
+                }
             }
+        }
+
+        private bool EndGame()
+        {
+            if (frogLeftPictureBox1.Location.X > emptyPictureBox.Location.X &&
+                frogLeftPictureBox2.Location.X > emptyPictureBox.Location.X &&
+                frogLeftPictureBox3.Location.X > emptyPictureBox.Location.X &&
+                frogLeftPictureBox4.Location.X > emptyPictureBox.Location.X &&
+                frogRightPictureBox1.Location.X < emptyPictureBox.Location.X &&
+                frogRightPictureBox2.Location.X < emptyPictureBox.Location.X &&
+                frogRightPictureBox3.Location.X < emptyPictureBox.Location.X &&
+                frogRightPictureBox4.Location.X < emptyPictureBox.Location.X)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,6 +91,11 @@ namespace FrogsInSwampWinFormsApp
         private void forProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            minNumberMovesToWinsLabel.Text = minNumberMovesToWins.ToString();
         }
     }
 }

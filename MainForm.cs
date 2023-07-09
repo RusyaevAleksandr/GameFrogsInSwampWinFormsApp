@@ -21,10 +21,10 @@ namespace FrogsInSwampWinFormsApp
                 {
                     MessageBox.Show("Вы справились за минимальное кол-во ходов!");
                 }
-                else 
+                else
                 {
                     var winsMessage = MessageBox.Show("Можно улучшить результат. " +
-                        "Хотите попробовать еще раз?", 
+                        "Хотите попробовать еще раз?",
                         "Конец игры", MessageBoxButtons.YesNo);
                     if (winsMessage == DialogResult.Yes)
                     {
@@ -49,9 +49,9 @@ namespace FrogsInSwampWinFormsApp
                     return true;
                 }
             }
-            catch 
-            { 
-                return false; 
+            catch
+            {
+                return false;
             }
 
             return false;
@@ -75,7 +75,7 @@ namespace FrogsInSwampWinFormsApp
 
                 numberMovesFrogs++;
 
-                numberMovesLabel.Text = numberMovesFrogs.ToString();                
+                numberMovesLabel.Text = numberMovesFrogs.ToString();
             }
         }
 

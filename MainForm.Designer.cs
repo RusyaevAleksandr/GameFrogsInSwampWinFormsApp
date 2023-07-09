@@ -44,7 +44,6 @@
             exitToolStripMenuItem = new ToolStripMenuItem();
             infoToolStripMenuItem = new ToolStripMenuItem();
             rulesGameToolStripMenuItem = new ToolStripMenuItem();
-            forProgramToolStripMenuItem = new ToolStripMenuItem();
             numberMovesLabelText = new Label();
             numberMovesLabel = new Label();
             minNumberMovesToWinsTextLabel = new Label();
@@ -206,7 +205,7 @@
             // 
             // infoToolStripMenuItem
             // 
-            infoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rulesGameToolStripMenuItem, forProgramToolStripMenuItem });
+            infoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rulesGameToolStripMenuItem });
             infoToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             infoToolStripMenuItem.ForeColor = Color.DarkSlateGray;
             infoToolStripMenuItem.Name = "infoToolStripMenuItem";
@@ -220,14 +219,6 @@
             rulesGameToolStripMenuItem.Size = new Size(193, 26);
             rulesGameToolStripMenuItem.Text = "Правила игры";
             rulesGameToolStripMenuItem.Click += rulesGameToolStripMenuItem_Click;
-            // 
-            // forProgramToolStripMenuItem
-            // 
-            forProgramToolStripMenuItem.ForeColor = Color.DarkSlateGray;
-            forProgramToolStripMenuItem.Name = "forProgramToolStripMenuItem";
-            forProgramToolStripMenuItem.Size = new Size(193, 26);
-            forProgramToolStripMenuItem.Text = "О программе";
-            forProgramToolStripMenuItem.Click += forProgramToolStripMenuItem_Click;
             // 
             // numberMovesLabelText
             // 
@@ -319,6 +310,7 @@
             MainMenuStrip = menuStrip;
             MaximizeBox = false;
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Лягушки на болоте";
             Shown += MainForm_Shown;
             ((System.ComponentModel.ISupportInitialize)frogLeftPictureBox1).EndInit();
@@ -355,7 +347,6 @@
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem infoToolStripMenuItem;
         private ToolStripMenuItem rulesGameToolStripMenuItem;
-        private ToolStripMenuItem forProgramToolStripMenuItem;
         private Label numberMovesLabelText;
         private Label numberMovesLabel;
         private Label minNumberMovesToWinsTextLabel;

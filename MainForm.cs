@@ -125,11 +125,6 @@ namespace FrogsInSwampWinFormsApp
                 $" ажда€ л€гушка может либо переместитьс€ вперед или назад на один шаг, либо перепрыгнуть через одну л€гушку, если за ней есть свободный лист.", "ѕравила игры");
         }
 
-        private void forProgramToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MainForm_Shown(object sender, EventArgs e)
         {
             minNumberMovesToWinsLabel.Text = minNumberMovesToWins.ToString();

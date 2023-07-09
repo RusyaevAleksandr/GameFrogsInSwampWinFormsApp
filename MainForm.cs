@@ -1,5 +1,3 @@
-using System.Diagnostics.Metrics;
-
 namespace FrogsInSwampWinFormsApp
 {
     public partial class MainForm : Form
@@ -7,18 +5,6 @@ namespace FrogsInSwampWinFormsApp
         private int numberMovesFrogs = 0;
 
         private int minNumberMovesToWins = 24;
-
-        public int NumberMovesFrogs
-        {
-            get { return numberMovesFrogs; }
-            set { numberMovesFrogs = value; }
-        }
-
-        public int MinNumberMovesToWins
-        {
-            get { return minNumberMovesToWins; }
-            set { minNumberMovesToWins = value; }
-        }
 
         public MainForm()
         {
@@ -31,23 +17,44 @@ namespace FrogsInSwampWinFormsApp
 
             if (EndGame())
             {
-                if (CanBeFewerSteps())
+                if (CanBeFewerSteps(numberMovesLabel.Text))
                 {
-
+                    MessageBox.Show("Вы справились за минимальное кол-во ходов!");
                 }
-                WinsForm winsForm = new WinsForm();
-                winsForm.Show();
+                else 
+                {
+                    var winsMessage = MessageBox.Show("Можно улучшить результат. " +
+                        "Хотите попробовать еще раз?", 
+                        "Конец игры", MessageBoxButtons.YesNo);
+                    if (winsMessage == DialogResult.Yes)
+                    {
+                        Application.Restart();
+                    }
+                    if (winsMessage == DialogResult.No)
+                    {
+                        MessageBox.Show("Игра закончилась. Выберите действие в Меню.");
+                    }
+                }
             }
         }
 
-        private bool CanBeFewerSteps()
+        private bool CanBeFewerSteps(string numberMovesLabel)
         {
-            if(numberMovesFrogs > minNumberMovesToWins)
+            try
             {
-                return false;
+                var presentValueMovesFrogs = Convert.ToInt32(numberMovesLabel);
+
+                if (presentValueMovesFrogs < minNumberMovesToWins)
+                {
+                    return true;
+                }
+            }
+            catch 
+            { 
+                return false; 
             }
 
-            return true;
+            return false;
         }
 
         private void Swap(PictureBox clickedPicture)
@@ -83,6 +90,16 @@ namespace FrogsInSwampWinFormsApp
                 frogRightPictureBox3.Location.X < emptyPictureBox.Location.X &&
                 frogRightPictureBox4.Location.X < emptyPictureBox.Location.X)
             {
+                frogLeftPictureBox1.Enabled = false;
+                frogLeftPictureBox2.Enabled = false;
+                frogLeftPictureBox3.Enabled = false;
+                frogLeftPictureBox4.Enabled = false;
+
+                frogRightPictureBox1.Enabled = false;
+                frogRightPictureBox2.Enabled = false;
+                frogRightPictureBox3.Enabled = false;
+                frogRightPictureBox4.Enabled = false;
+
                 return true;
             }
 
@@ -101,7 +118,11 @@ namespace FrogsInSwampWinFormsApp
 
         private void rulesGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show($"Короткая игра головоломка на логику.\n\n" +
+                $"   На листах в болоте сидит восемь лягушек: четыре лягушки смотрят направо и четыре лягушки смотрят налево, между ними пустой листок.\n\n " +
+                $"При помощи кликов мыши нужно поменять их местами, чтобы четыре лягушки которые смотрят направо оказались справа, а четыре лягушки которые смотрят налево переместились влево, " +
+                $"выполнить это нужно за минимальное кол-во ходов. " +
+                $"Каждая лягушка может либо переместиться вперед или назад на один шаг, либо перепрыгнуть через одну лягушку, если за ней есть свободный лист.", "Правила игры");
         }
 
         private void forProgramToolStripMenuItem_Click(object sender, EventArgs e)
